@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tin Tức</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 750px;
+            margin: auto;
+        }
+        .banner {
+            height: 100px;
+            background: url('banner.jpg') no-repeat center;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+        }
+        .menu {
+            width: 150px;
+            background: #f0f0f0;
+            padding: 10px;
+        }
+        .menu a {
+            display: block;
+            color: blue;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .menu a:hover {
+            color: red;
+        }
+        .main {
+            flex: 1;
+            padding: 10px;
+        }
+        .footer {
+            height: 50px;
+            background: #ddd;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+    <script>
+        function loadContent(page) {
+            let content = {
+                'kinhte': '<h2>Cầm cố chứng khoán: Kênh tạo vốn cho nhà đầu tư?</h2><p>Thông tin về chứng khoán...</p>',
+                'chinhtri': '<h2>Làm việc trong Bộ... online</h2><p>Thông tin về chính trị...</p>'
+            };
+            document.getElementById('main-content').innerHTML = content[page];
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">TỐC ĐỘ CỦA THÔNG TIN</div>
+        <div class="content">
+            <div class="menu">
+                <h3>TIN TỨC</h3>
+                <a href="#" onclick="loadContent('kinhte')">Kinh tế</a>
+                <a href="#" onclick="loadContent('chinhtri')">Chính trị</a>
+            </div>
+            <div class="main" id="main-content">
+                <h2>Chọn một danh mục để xem nội dung</h2>
+            </div>
+        </div>
+        <div class="footer">Bản quyền &copy; 2025</div>
+    </div>
+</body>
+</html>
