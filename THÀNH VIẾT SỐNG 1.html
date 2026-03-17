@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thành Viết Sống - Nguyễn Đức Thành</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #fffaf5, #fff);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #ff6a00, #ffb347);
+    color: white;
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.lessons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.lesson-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.lesson-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.lesson-content {
+    padding: 15px;
+}
+
+.lesson-content button {
+    background: #ff6a00;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.detail-view {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+}
+
+.slides {
+    margin-top: 40px;
+}
+
+.slide {
+    background: white;
+    border-left: 6px solid #ff6a00;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Thành Viết Sống</h1>
+    <p>Tác giả: Nguyễn Đức Thành – Chia sẻ bài học & cảm hứng sống</p>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#slides">Chuỗi khoảnh khắc</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<div class="container" id="home">
+    <h2>Bài học mới</h2>
+
+    <div class="lessons">
+        <div class="lesson-card">
+            <img src="https://picsum.photos/id/1011/400/200">
+            <div class="lesson-content">
+                <h3>Muốn biết một người bản lĩnh?</h3>
+                <p>Xem cách họ đứng dậy sau thất bại...</p>
+                <button onclick="showDetail('bl')">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <img src="https://picsum.photos/id/1025/400/200">
+            <div class="lesson-content">
+                <h3>Muốn biết ai tinh tế?</h3>
+                <p>Xem họ chú ý đến chi tiết nhỏ...</p>
+                <button onclick="showDetail('tt')">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="lesson-card">
+            <img src="https://picsum.photos/id/1005/400/200">
+            <div class="lesson-content">
+                <h3>Biết đủ là hạnh phúc</h3>
+                <p>Hạnh phúc đến từ sự an tâm...</p>
+                <button onclick="showDetail('bd')">Xem chi tiết</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-view" id="detailView"></div>
+</div>
+
+<!-- ===== SLIDES ===== -->
+<div class="container slides" id="slides">
+    <h2>Chuỗi khoảnh khắc cuộc sống</h2>
+
+    <div class="slide">
+        <h3>Slide 2 – Khi bạn đứng một mình giữa thất bại</h3>
+        <p>Những thất bại khiến bạn cô đơn nhưng cũng giúp bạn mạnh mẽ hơn.</p>
+        <strong>Thông điệp:</strong> Giá trị bản thân nằm ở cách bạn đứng lên.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 3 – Khi thấy người thân cười hạnh phúc</h3>
+        <p>Hạnh phúc đến từ tình yêu và sự kết nối.</p>
+        <strong>Thông điệp:</strong> Niềm vui giản đơn là quan trọng nhất.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 4 – Khi bạn tha thứ</h3>
+        <p>Tha thứ giải phóng chính bạn.</p>
+        <strong>Thông điệp:</strong> Buông bỏ để sống nhẹ nhàng.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 5 – Khi bạn cho đi không mong đáp trả</h3>
+        <strong>Thông điệp:</strong> Cho đi là nhận lại nhiều nhất.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 6 – Khi đón nhận chính mình</h3>
+        <strong>Thông điệp:</strong> Tự yêu thương là nền tảng hạnh phúc.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 7 – Khi nhìn lại quá khứ không hối tiếc</h3>
+        <strong>Thông điệp:</strong> Trân trọng bài học.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 8 – Khi chọn sống trọn vẹn từng ngày</h3>
+        <strong>Thông điệp:</strong> Sống trọn vẹn hôm nay.
+    </div>
+
+    <div class="slide">
+        <h3>Slide 9 – Kết thúc</h3>
+        <strong>Yêu thương & sống trọn vẹn ✨</strong>
+    </div>
+</div>
+
+<footer id="contact">
+    <p>Liên hệ: thanhvietsong@gmail.com</p>
+    <p>© 2025 Thành Viết Sống – Nguyễn Đức Thành</p>
+</footer>
+
+<script>
+const lessons = {
+    bl: {title:"Muốn biết một người bản lĩnh?", content:"Bản lĩnh thể hiện khi đứng lên sau thất bại."},
+    tt: {title:"Muốn biết ai tinh tế?", content:"Tinh tế đến từ việc quan sát những điều nhỏ."},
+    bd: {title:"Biết đủ là hạnh phúc", content:"Hạnh phúc là biết trân trọng hiện tại."}
+};
+
+function showDetail(id){
+    const box = document.getElementById("detailView");
+    box.innerHTML = `<h3>${lessons[id].title}</h3><p>${lessons[id].content}</p>`;
+    box.style.display = "block";
+}
+</script>
+
+</body>
+</html>
